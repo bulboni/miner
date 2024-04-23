@@ -1,4 +1,7 @@
 # miner
+1. apt install python3.9-venv
+2. python3 -m venv v
+3. source v/bin/activate
 TPU 96 Core https://www.kaggle.com/
 register with gmail
 verify phone number format : 081245754875
