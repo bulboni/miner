@@ -4,10 +4,10 @@ import random
 
 # Rekaman gerakan mouse sebelumnya (ganti dengan rekaman Anda)
 recorded_mouse_actions = [
-    (580, 157, 0.5),  # Contoh: Gerakan ke koordinat (100, 200) dalam 0.5 detik
-    (1020, 634, 0.5),
-    (260, 729, 0.5),
-    (610, 183, 0.5),
+    (456, 559, 0.5),  # Contoh: Gerakan ke koordinat (100, 200) dalam 0.5 detik
+    (505, 495, 0.5),
+    (571, 634, 0.5),
+    (502, 479, 0.5),
     # ... tambahkan langkah lainnya
 ]
 
