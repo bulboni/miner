@@ -32,9 +32,10 @@ while current_time - start_time < total_duration:
     for action in recorded_mouse_actions:
         if action[0] == 631 and action[1] == 378:  # Jika mouse berada di koordinat (631, 378)
             pyautogui.typewrite('top')
+            pyautogui.press('enter')  # Tekan tombol Enter
             time.sleep(60)  # Tunggu 1 menit
-            pyautogui.hotkey('ctrl', 'c')  # Tekan Ctrl + C
-            pyautogui.press('enter')  # Tekan Enter
+            pyautogui.hotkey('ctrl', 'c')  # Tekan tombol Ctrl + C
+            pyautogui.press('enter')  # Tekan tombol Enter
         elif action[0] == 700 and action[1] == 751:  # Jika mouse berada di koordinat (700, 751)
             pyautogui.typewrite('clear')
             pyautogui.press('enter')
