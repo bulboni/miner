@@ -1,6 +1,7 @@
 import pyautogui
 import time
 import random
+import gc  # Import modul gc untuk garbage collection
 
 # Rekaman gerakan mouse sebelumnya (ganti dengan rekaman Anda)
 recorded_mouse_actions = [
@@ -42,7 +43,8 @@ while current_time - start_time < total_duration:
     
     pyautogui.hotkey('ctrl', 'c')  # Menekan tombol Ctrl + C
     
-    pyautogui.clearCache()  # Membersihkan cache memori pyautogui
+    # Membersihkan sampah (garbage collection)
+    gc.collect()
     
     # Menunggu sebentar sebelum mengulang langkah berikutnya
     time.sleep(interval)
