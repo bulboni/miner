@@ -3,12 +3,13 @@ import time
 import random
 import gc  # Import modul gc untuk garbage collection
 
+# Setel fail-safe menjadi False
+pyautogui.FAILSAFE = False
+
 # Rekaman gerakan mouse sebelumnya (ganti dengan rekaman Anda)
 recorded_mouse_actions = [
     (631, 378, 0.5),  # Contoh: Gerakan ke koordinat (100, 200) dalam 0.5 detik
-    (677, 586, 0.5),
-    (744, 611, 0.5),
-    (805, 580, 0.5),
+    (700, 751, 0.5),
     # ... tambahkan langkah lainnya
 ]
 
@@ -27,21 +28,20 @@ while current_time - start_time < total_duration:
     random_delay = random.uniform(2, 6)  # Jeda waktu acak antara 2 hingga 6 detik
     time.sleep(random_delay)
     
-    # Menambahkan langkah untuk mengetik "top" dan tekan tombol Enter di koordinat pertama
-    recorded_mouse_actions.insert(0, ('top', 0))  # Mengetik "top"
-    recorded_mouse_actions.insert(1, ('enter', 0))  # Tekan tombol Enter
-    
     # Memainkan kembali rekaman gerakan mouse
     for action in recorded_mouse_actions:
-        if action[0] == 'top':
-            pyautogui.typewrite('top', interval=0.25)
-        elif action[0] == 'enter':
+        if action[0] == 631 and action[1] == 378:  # Jika mouse berada di koordinat (631, 378)
+            pyautogui.typewrite('top')
+            time.sleep(60)  # Tunggu 1 menit
+            pyautogui.hotkey('ctrl', 'c')  # Tekan Ctrl + C
+            pyautogui.press('enter')  # Tekan Enter
+        elif action[0] == 700 and action[1] == 751:  # Jika mouse berada di koordinat (700, 751)
+            pyautogui.typewrite('clear')
             pyautogui.press('enter')
+            pyautogui.moveTo(631, 378, duration=0.5)  # Pindahkan mouse ke koordinat (631, 378)
         else:
             pyautogui.moveTo(action[0], action[1], duration=action[2])
             pyautogui.doubleClick()  # Melakukan double klik pada setiap langkah
-    
-    pyautogui.hotkey('ctrl', 'c')  # Menekan tombol Ctrl + C
     
     # Membersihkan sampah (garbage collection)
     gc.collect()
