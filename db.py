@@ -8,8 +8,8 @@ pyautogui.FAILSAFE = False
 
 # Rekaman gerakan mouse sebelumnya (ganti dengan rekaman Anda)
 recorded_mouse_actions = [
-    (631, 378, 0.5),  # Contoh: Gerakan ke koordinat (100, 200) dalam 0.5 detik
-    (700, 751, 0.5),
+    (374, 240, 0.9),  # Contoh: Gerakan ke koordinat (100, 200) dalam 0.5 detik
+    (486, 245, 0.9),
     # ... tambahkan langkah lainnya
 ]
 
