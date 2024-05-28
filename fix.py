@@ -24,7 +24,7 @@ def handle_client(client_socket, remote_host, remote_port):
 
 def main():
     local_host = "0.0.0.0"  # Bind to all available interfaces
-    local_port = 4052  # Change to desired local port
+    local_port = 8080  # Change to desired local port
     remote_host = "rx.unmineable.com"  # Change to target server address
     remote_port = 3333  # Change to target server port
     
