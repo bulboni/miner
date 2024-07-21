@@ -17,6 +17,9 @@ total_duration = 86400
 start_time = time.time()
 current_time = time.time()
 
+# Jeda 1 menit sebelum memulai proses apapun
+time.sleep(60)
+
 while current_time - start_time < total_duration:
     for coord in coordinates:
         pyautogui.moveTo(coord[0], coord[1], duration=0.5)
